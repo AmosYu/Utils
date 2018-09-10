@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Utils</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="ed_label">教学部分</string>
+    <string name="tool_label">工具集合</string>
+    <string name="third_lable">第三方类库、插件</string>
+    <string name="other_lable">其它功能</string>
+</resources>
