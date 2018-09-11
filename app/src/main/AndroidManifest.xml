@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ed.activity.Ed_Activity_Activity"></activity>
+        <activity android:name=".ed.activity.Ed_Activity_Activity" />
+        <activity android:name=".ed.activity.SecondActivity"></activity>
     </application>
 
 </manifest>

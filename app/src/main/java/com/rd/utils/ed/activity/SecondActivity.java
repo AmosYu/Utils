@@ -1,38 +1,23 @@
 package com.rd.utils.ed.activity;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
 import com.rd.utils.R;
 
-/**
- * Android 组件一  Activity
- * 本业包含
- *      1.Activity的生命周期
- *      2.
- *
- */
-public class Ed_Activity_Activity extends Activity implements View.OnClickListener{
+public class SecondActivity extends Activity {
 
-    private static final String TAG = "Ed_Activity_Activity";
+    private static final String TAG = "SecondActivity深入2";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ed_activity);
-
-
-
-
-
-
-
-
-
-
+        setContentView(R.layout.activity_second);
+        Log.i(TAG, "onCreate: ");
     }
+
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -48,7 +33,7 @@ public class Ed_Activity_Activity extends Activity implements View.OnClickListen
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i(TAG, "onResume:123 ");
+        Log.i(TAG, "onResume: ");
     }
 
     @Override
@@ -67,14 +52,5 @@ public class Ed_Activity_Activity extends Activity implements View.OnClickListen
     protected void onDestroy() {
         super.onDestroy();
         Log.i(TAG, "onDestroy: ");
-    }
-
-    @Override
-    public void onClick(View v) {
-        if(v.getId()==R.id.jump_second_activity){
-            Intent intent = new Intent();
-            intent.setClass(this,SecondActivity.class);
-            startActivity(intent);
-        }
     }
 }
