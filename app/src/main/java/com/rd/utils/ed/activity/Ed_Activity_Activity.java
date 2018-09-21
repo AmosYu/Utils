@@ -1,6 +1,8 @@
 package com.rd.utils.ed.activity;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,21 +24,18 @@ public class Ed_Activity_Activity extends Activity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ed_activity);
-
-
-
-
-
-
-
-
-
-
     }
     @Override
     protected void onStart() {
         super.onStart();
         Log.i(TAG, "onStart: ");
+        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        ActivityManager.RunningTaskInfo info = manager.getRunningTasks(1).get(0);
+
+        String packageName = info.topActivity.getPackageName();
+        String topclassName = info.topActivity.getClassName();
+        String baseclassname = info.baseActivity.getClassName();
+        int acitivitynum = info.numActivities;
     }
 
     @Override
